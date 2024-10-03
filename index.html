@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Natural Farms</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap"
+    rel="stylesheet"
+  />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+    }
+    header {
+      background-color: #bde4a8;
+      box-shadow: 10px 10px 8px -7px rgba(0, 0, 0, 0.349);
+    }
+    #home {
+      margin-top: 0.5%;
+      display: flex;
+      justify-content: center;
+      flex-direction: row;
+      align-items: center;
+      width: 100%;
+      padding: 15%;
+      background-image: url('bg.jpg');
+      background-size: cover;
+      position: relative;
+      background-position: center;
+      object-fit: cover;
+    }
+    #home::before {
+      content: '';
+      background-color: rgba(0, 0, 0, 0.493);
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+    }
+    #home h3 {
+      font-size: 2.5rem;
+      position: relative;
+      z-index: 2;
+      color: white;
+      font-weight: 400;
+    }
+    a {
+      text-decoration: none;
+      font-size: 2rem;
+      color: #000;
+      font-weight: 400;
+      font-size: 1rem;
+    }
+    a:hover {
+      text-decoration: underline;
+      text-decoration-color: #53e902;
+      text-decoration-thickness: 0.2rem;
+    }
+    nav {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      align-items: center;
+      width: 100%;
+      padding: 1%;
+    }
+    ul {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      width: 100%;
+      list-style: none;
+      text-decoration: none;
+    }
+    #about {
+      padding: 5%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      background-color:#9cc69b;
+    }
+    #about h3 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+    #contact {
+      padding: 10%;
+      background-color: #9cc69b;
+    }
+    #products {
+      padding: 5%;
+      background-color:#fff;
+      text-align: center;
+    }
+    #products h3 {
+      font-size: 2rem;
+      margin-bottom:2rem;
+    }
+    .products_container {
+      display: flex;
+      flex-wrap: nowrap;
+      justify-content: center;
+      gap: 2rem;
+      margin-top: 1rem;
+    }
+    .card {
+      background-color:#bde4a8;
+      border-radius: 1rem;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      padding: 1rem;
+      width: max-content;
+      text-align: center;
+      transition: transform 0.2s;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+    }
+    .form-1 {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-evenly;
+      font-weight: 900;
+      margin: 0 auto;
+      height: 60vh;
+      width: 80vw;
+      background-color: #fff;
+      max-width: 420px;
+      border-radius: 1.25rem;
+      box-shadow: 0.3125rem 0.625rem 1.25rem rgba(0, 0, 0, 0.1);
+      border: none;
+    }
+    input {
+      font-weight: 400;
+      height: 5vh;
+      width: 85%;
+      text-align: left;
+      border-radius: 0.3125rem;
+      padding: 1.25rem;
+      line-height: 1.25rem;
+      font-size: 1rem;
+    }
+    textarea {
+      height: 20vh;
+      width: 75%;
+      border-radius: 0.5rem;
+      padding: 1.875rem;
+      resize: none;
+    }
+    #submit {
+      margin-top: 2vh;
+      color: #fff;
+      background-color: #bde4a8;
+      border-radius: 0.3125rem;
+      font-size: 1rem;
+      font-weight: 500;
+      text-align: center;
+      padding: 0.625rem;
+      display: inline-block;
+      border: 0.1px solid;
+    }
+    #submit:hover {
+      background-color:#9cc69b;
+      color: #fff;
+      cursor: pointer;
+      transition: all linear 0.15s;
+    }
+    footer {
+      background-color: #bde4a8;
+      width: 100%;
+      height: max-content;
+      display: flex;
+      padding: 1%;
+      justify-content: center;
+      align-items: center;
+    }
+    @media (max-width:700px){
+      .products_container{
+        flex-direction: column;
+      }
+      .card{
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1 style="font-family: 'Dancing Script', cursive;">Natural Farms</h1>
+    <nav>
+      <ul>
+        <li>
+          <a href="#">Home</a>
+        </li>
+        <li>
+          <a href="#about">About</a>
+        </li>
+        <li>
+          <a href="#products">Products</a>
+        </li>
+        <li>
+          <a href="#contact">Contact</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section id="home">
+      <div>
+        <h3>Welcome to Natural Farms</h3>
+      </div>
+    </section>
+    <section id="about">
+      <div>
+        <h3>About Us</h3>
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Et nihil exercitationem
+          tempora itaque non ipsam praesentium molestias doloribus, dolorem eligendi possimus.
+          Doloribus recusandae tenetur libero corrupti? Asperiores beatae natus omnis quasi sed,
+          fuga adipisci, facilis sunt doloribus placeat perspiciatis rem tempore, provident quia
+          ea molestiae! Accusantium quibusdam dolor optio voluptatem? Lorem, ipsum dolor sit amet
+          consectetur adipisicing elit. Harum consequuntur, quidem enim accusantium nam quas nihil
+          minus quae esse magnam in omnis delectus dolorem molestiae adipisci aperiam accusamus
+          aliquid eius?
+        </p>
+      </div>
+    </section>
+    <section id="products">
+      <div>
+        <h3>Our Products</h3>
+        <div class="products_container">
+          <div class="card">
+            <h4>Organic Vegetables</h4>
+            <p>Fresh, locally sourced organic vegetables, including carrots, tomatoes, and spinach. Grown without synthetic fertilizers or pesticides for optimal flavor and nutrition.</p>
+          </div>
+          <div class="card">
+            <h4>Farm-Fresh Eggs</h4>
+            <p>Our farm-fresh eggs are collected daily from free-range hens. Rich in flavor and packed with nutrients, these eggs are perfect for breakfast or baking.</p>
+          </div>
+          <div class="card">
+            <h4>Raw Honey</h4>
+            <p>Pure, unprocessed honey harvested from our own hives. Packed with antioxidants and natural goodness, it’s a delicious addition to tea or drizzled over toast.</p>
+          </div>
+          <div class="card">
+            <h4>Artisan Bread</h4>
+            <p>Handcrafted bread made with whole grains and natural ingredients. Available in a variety of flavors, including sourdough, multigrain, and herb-infused.</p>
+          </div>
+          <div class="card">
+            <h4>Herbal Teas</h4>
+            <p>A selection of herbal teas made from organic herbs grown on our farm. Flavors include chamomile, peppermint, and a refreshing lemon balm blend.</p>
+          </div>
+          <div class="card">
+            <h4>Dried Fruits</h4>
+            <p>Naturally dried fruits, including apples, apricots, and figs. A healthy snack option, perfect for on-the-go or added to your favorite trail mix.</p>
+          </div>
+          <div class="card">
+            <h4>Fresh Milk</h4>
+            <p>Pure, unprocessed milk from our happy cows. Rich in flavor and nutrients, our milk is perfect for drinking, cooking, or baking.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="contact">
+      <form class="form-1" action="#" method="post">
+        <h3>Contact Us</h3>
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <textarea name="message" placeholder="What's on your mind?" required></textarea>
+        <button id="submit" type="submit">Send Message</button>
+      </form>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2024 Natural Farms. All rights reserved.</p>
+  </footer>
+</body>
+</html>
